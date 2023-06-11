@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "OpenSansregular";
+  src: url('../fontie-package/Open\ Sans\ Regular.woff2') format('woff2'), url('../fontie-package/Open\ Sans\ Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSansbold";
+  src: url('../fontie-package/Open\ Sans\ Bold.woff2') format('woff2'), url('../fontie-package/Open\ Sans\ Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
+p,a,li {
+  font-weight: normal;
+}
+
+h1,h2 {
+  font-weight: bold;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  background-color: hsl(347, 100%, 30%);
+  height: 15rem;
+}
+
+nav ul {
+  flex-direction: column;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+}
+
+@media(min-width: 33rem) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  .nav {
+    height: 5rem;
+  }
+}
+
+nav li {
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+nav li a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.event_chain ul {
+  overflow: hidden;
+  background-color: rgb(235, 0, 50);
+  text-overflow: clip;
+  list-style: none;
+  text-align: end;
+  height: 5rem;
+  justify-content: space-between;
+}
+
+.event_chain li a {
+  position: static;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.event1 {
+  margin-right: -40rem;
+  display: inline-block;
+  animation: scrolling-left1 107s linear infinite;
+}
+
+.event2 {
+  margin-right: -40rem;
+  display: inline-block;
+  animation: scrolling-left1 107s linear infinite;
+  animation-delay: 20s;
+}
+
+.event3 {
+  margin-right: -45rem;
+  display: inline-block;
+  animation: scrolling-left1 207s linear infinite;
+  animation-delay: 40s;
+}
+
+.event4 {
+  margin-right: -40rem;
+  display: inline-block;
+  animation: scrolling-left1 107s linear infinite;
+  animation-delay: 60s;
+}
+
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-600%);
+  }
+}
+
+.countup,
+.countdown {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.academic {
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  background-color: hsl(42, 100%, 95%);
+}
+
+.container {
+  max-width: 100rem;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  width: 16rem;
+  height: 28rem;
+  border-radius: 2rem;
+  margin: 1rem 1rem 1rem 1rem;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  border: solid white;
+}
+
+.project1:hover,
+.project2:hover,
+.project3:hover,
+.project4:hover,
+.project5:hover,
+.project6:hover,
+.project7:hover,
+.project8:hover,
+.project9:hover  {
+  padding: 2rem;
+  width: 18rem;
+  height: 30rem;
+  transition-duration: 0.2s;
+  margin: 0;
+}
+
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.project6,
+.project7,
+.project8,
+.project9 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container h1 {
+  font-size: 1.5rem;
+}
+
+.container h2 {
+  font-size: 1rem;
+}
+
+button ul, .container div ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+button li, .container div li {
+  background-color: hsl(0, 0%, 83%);
+  border-radius: 1rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+button img {
+  padding: 1rem 1rem 1rem 1rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.container div {
+  position: fixed;
+  width: 75%;
+  background-color: hsl(42, 100%, 95%);
+  height: 100%;
+}
+
+.project_info1,
+.project_info2,
+.project_info3,
+.project_info4,
+.project_info5,
+.project_info6,
+.project_info7,
+.project_info8,
+.project_info9 {
+  transform: translateX(0vw);
+  right: 0;
+  top: 0;
+  z-index: 1;
+  transition: transform 1s ease;
+  scroll-snap-align: start;
+}
+
+.container div button {
+  height: 6rem;
+  width: 6rem;
+  border: solid hsl(42, 100%, 95%);
+  background-color: hsl(42, 100%, 95%);
+  right: 1rem;
+  position: fixed;
+}
+
+.container div div {
+  margin-left: 2rem;
+  gap: 2rem;
+  margin-top: 10rem;
+  position: relative;
+  height: 40rem;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.container div p {
+font-size: 1rem;
+}
+
+.container div h2 {
+  margin-top: 5rem;
+}
+
+.container div p,
+.container div h1,
+.container div h2 {
+  text-align: left;
+padding-left: 2rem;
+margin-bottom: 1rem;
+}
+
+.container div li {
+  margin-bottom: 1rem;
+}
+
+.container div button img {
+  width: 6rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.hidden {
+  transform: translateX(100vw);
+}
+
+.container div img {
+  width: 50%;
+  object-fit: contain;
+}
+
+footer {
+  background-color: hsl(0, 0%, 0%);
+}
+
+footer ul {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+footer li {
+  width: 4rem;
+  filter: invert();
+  cursor: pointer;
+}
+
+footer p {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
